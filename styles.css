@@ -9,6 +9,7 @@ body {
   max-width: 800px;
   margin: 50px auto;
   padding: 50px;
+  border-radius: 20px;
   background-color: rgb(245, 245, 245);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -21,17 +22,17 @@ h1 {
 input[type="text"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
   border: 3px solid #ddd;
   border-radius: 10px;
   font-size: 16px;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 0 15px;
   background-color: #007BFF;
   color: #fff;
   border: none;
+  margin-left: 10px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
@@ -44,4 +45,74 @@ button:hover {
 #result {
   font-size: 20px;
   margin-top: 30px;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#location-btn {
+  margin-left: 10px;
+  background-color: #ccc;
+  color: #333;
+}
+
+.main-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temperature-section {
+  flex-grow: 1;
+}
+
+.temp-details {
+  display: flex;
+  align-items: center;
+}
+
+#current-temp {
+  font-size: 4rem;
+  margin-right: 20px;
+}
+
+.weather-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+
+.detail-item i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.forecast-day {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
 }

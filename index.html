@@ -3,17 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Advanced Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Weather App</h1>
-        <input type="text" id="search-input" placeholder="Enter Place name...">
-        <button id="search-btn">Search</button>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter city name...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <button id="location-btn"><i class="fas fa-map-marker-alt"></i></button>
+        </div>
 
-        <div id="result">
-            <!-- The result will be displayed here -->
+        <div id="current-weather">
+            <div class="main-weather">
+                <div class="temperature-section">
+                    <h2 id="city-name">City</h2>
+                    <div class="temp-details">
+                        <h1 id="current-temp">--°</h1>
+                        <div class="temp-extra">
+                            <p id="weather-description">Loading...</p>
+                            <p>Feels like <span id="feels-like">--°</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-icon">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <p>Humidity</p>
+                        <p id="humidity">--%</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <p>Wind</p>
+                        <p id="wind-speed">-- km/h</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-cloud"></i>
+                    <div>
+                        <p>Precipitation</p>
+                        <p id="precipitation">--%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="forecast-container">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast" class="forecast-grid">
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
